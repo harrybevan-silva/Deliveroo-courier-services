@@ -1,0 +1,6 @@
+{
+  "name": "Deliveroo Kenya",
+  "description": "High-converting website for a courier and delivery company in Nairobi, Kenya.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
