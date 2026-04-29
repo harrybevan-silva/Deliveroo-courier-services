@@ -25,12 +25,24 @@ export default function Layout() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white">
-                <Package className="h-5 w-5" />
+              <img 
+                src="/logo.png" 
+                alt="Deliveroo.ke Logo" 
+                className="h-8 w-auto object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  document.getElementById('fallback-logo')?.classList.remove('hidden');
+                  document.getElementById('fallback-logo')?.classList.add('flex');
+                }} 
+              />
+              <div id="fallback-logo" className="hidden items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white">
+                  <Package className="h-5 w-5" />
+                </div>
+                <span className="text-xl font-bold tracking-tight text-gray-900">
+                  Deliveroo<span className="text-primary-600">.ke</span>
+                </span>
               </div>
-              <span className="text-xl font-bold tracking-tight text-gray-900">
-                Deliveroo<span className="text-primary-600">.ke</span>
-              </span>
             </Link>
           </div>
 
@@ -120,12 +132,24 @@ export default function Layout() {
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 xl:col-span-1">
               <Link to="/" className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white">
-                  <Package className="h-5 w-5" />
+                <img 
+                  src="/logo.png" 
+                  alt="Deliveroo.ke Logo" 
+                  className="h-8 w-auto object-contain brightness-0 invert opacity-90"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    document.getElementById('footer-fallback-logo')?.classList.remove('hidden');
+                    document.getElementById('footer-fallback-logo')?.classList.add('flex');
+                  }} 
+                />
+                <div id="footer-fallback-logo" className="hidden items-center gap-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white">
+                    <Package className="h-5 w-5" />
+                  </div>
+                  <span className="text-xl font-bold tracking-tight text-white">
+                    Deliveroo<span className="text-primary-600">.ke</span>
+                  </span>
                 </div>
-                <span className="text-xl font-bold tracking-tight text-white">
-                  Deliveroo<span className="text-primary-600">.ke</span>
-                </span>
               </Link>
               <p className="border-l-2 border-primary-600 pl-4 text-sm text-gray-400">
                 Fast, reliable, and affordable delivery across Nairobi. Send packages, food, and goods in minutes.

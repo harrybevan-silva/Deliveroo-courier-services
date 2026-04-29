@@ -3,6 +3,13 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import BookDelivery from "./pages/Book";
 import TrackOrder from "./pages/Track";
+import HowItWorks from "./pages/HowItWorks";
+import Pricing from "./pages/Pricing";
+import Business from "./pages/Business";
+import Rider from "./pages/Rider";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import FAQ from "./pages/FAQ";
 
 export default function App() {
   return (
@@ -11,14 +18,13 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="book" element={<BookDelivery />} />
         <Route path="track" element={<TrackOrder />} />
-        {/* Mock other routes for now */}
-        <Route path="how-it-works" element={<div className="p-8 text-center text-2xl font-bold">How It Works Page</div>} />
-        <Route path="pricing" element={<div className="p-8 text-center text-2xl font-bold">Pricing Page</div>} />
-        <Route path="business" element={<div className="p-8 text-center text-2xl font-bold">For Businesses Page</div>} />
-        <Route path="rider" element={<div className="p-8 text-center text-2xl font-bold">Become a Rider Page</div>} />
-        <Route path="about" element={<div className="p-8 text-center text-2xl font-bold">About Us Page</div>} />
-        <Route path="contact" element={<div className="p-8 text-center text-2xl font-bold">Contact Page</div>} />
-        <Route path="faq" element={<div className="p-8 text-center text-2xl font-bold">FAQ Page</div>} />
+        <Route path="how-it-works" element={<HowItWorks />} />
+        <Route path="pricing" element={<Pricing />} />
+        <Route path="business" element={<Business />} />
+        <Route path="rider" element={<Rider />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="faq" element={<FAQ />} />
       </Route>
     </Routes>
   );

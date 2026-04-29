@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Search, MapPin, Truck, CheckCircle2, Navigation, Package } from "lucide-react";
 import { Button } from "../components/ui/button";
